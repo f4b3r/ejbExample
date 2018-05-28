@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+	version="3.0">
+	<display-name>CrunchifyRESTJerseyExample</display-name>
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.htm</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>default.htm</welcome-file>
+		<welcome-file>default.jsp</welcome-file>
+	</welcome-file-list>
+ 
+	 <servlet>
+      <servlet-name>AddItemServlet</servlet-name>
+      <servlet-class>it.fab.client.AddItemServlet</servlet-class>
+   </servlet>
+ 
+ 
+   <servlet-mapping>
+      <servlet-name>HandleIndex</servlet-name>
+      <url-pattern>/handleindex</url-pattern>
+   </servlet-mapping> 
+   
+    <servlet>
+      <servlet-name>HandleIndex</servlet-name>
+      <servlet-class>it.fab.client.HandlePageIndex</servlet-class>
+   </servlet>
+ 
+ 
+   <servlet-mapping>
+      <servlet-name>AddItemServlet</servlet-name>
+      <url-pattern>/additem</url-pattern>
+   </servlet-mapping> 
+   
+   
+   <servlet>
+      <servlet-name>ConfirmOrderServlet</servlet-name>
+      <servlet-class>it.fab.client.ConfirmOrderServlet</servlet-class>
+   </servlet>
+ 
+ 
+ 
+   <servlet-mapping>
+      <servlet-name>ConfirmOrderServlet</servlet-name>
+      <url-pattern>/confirmorder</url-pattern>
+   </servlet-mapping>
+</web-app>
